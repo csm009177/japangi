@@ -11,22 +11,17 @@
   <script>
     let root = document.getElementById('root');
     console.dir(root);
+    
+    //make child function
+    function makeChild(faTagId, tagName, many){
+      for(i=0; i<many; i++){
+        let cre = document.createElement(`${tagName}`);
+        faTagId.appendChild(cre);  }; }
 
-    let divOne = document.createElement('div');
-    root.appendChild(divOne);
-    divOne.id = "1";
-
-
-
-    let divtwo = document.createElement('div');
-    root.appendChild(divtwo);
-    divtwo.id = "2";
-
-    let divThe = document.createElement('div');
-    root.appendChild(divThe);
-    divThe.id = "3";
-
-
+    //make 3 div
+    makeChild(root, 'div', 3);
+    
+        
 
 
   </script>
