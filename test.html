@@ -17,7 +17,17 @@
         let cre = document.createElement(`${tagName}`);
         faTagId.appendChild(cre);  }; }
     
-    
+    function givId(faTagId, tagName, many) {
+      for(i=0; i<many; i++){
+        let fTag = document.getElementById(`${faTagId}`)
+        fTag[i] = i;
+      }
+    }
+
+    function makeChildgivId (faTagId, tagName, many){
+      makeChild(faTagId, tagName, many);
+      givId    (faTagId, tagName, many);
+    }
 
 
     makeChildgivId(root, 'div', 3);

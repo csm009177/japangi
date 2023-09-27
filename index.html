@@ -20,7 +20,7 @@
     function givId(faTagId, tagName, many){
       for(i=0; i<many; i++){
         let call = faTagId.getElementsByTagName(`${tagName}`);
-        call[i].id = `${faTagId[i]}`;
+        call[i].id = `${tagName}${i}`;
 
         
       };  }
