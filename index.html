@@ -4,44 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>japangi</title>
+  <title>Document</title>
 </head>
 <body>
   <div id="root"></div>
   <script>
-    // root_div
-    let root = document.body.children[0];
-    console.dir(root)
+    let root = document.getElementById('root');
+    console.dir(root);
 
-    // div0~div2 
-    for(i=0; i<3; i++){
-      let creDiv = document.createElement('div');
-      let div = root.getElementsByTagName('div');
-      root.appendChild(creDiv);
-      div[i].id = `div${[i]}`;
-    };
-
-    // div0_child
-    for(i=0; i<9; i++) {
-      let creDiv = document.createElement('div');
-      let div0 = document.getElementById('div0');
-      div0.appendChild(creDiv);
-      div0.children[i].id = `div0${[i]}`;
-    }
-    // function makeChild 
-    function makeChild(faTagId, many, tagName){
-    if(typeof(tagName)==="string"){
-      for(i=0; i<many; i++) {
+    function makeChild(faTagId, tagName, many){
+      for(i=0; i<many; i++){
         let cre = document.createElement(`${tagName}`);
-        let fTag = document.getElementById(`${faTagId}`);
-        let sonTag = fTag.children;
-        faTagId.appendChild(cre);
-        sonTag.id = `${faTagId[i]}`;
-        }
-      } else {
-        console.error("tagName have to be string")
-      }
+        faTagId.appendChild(cre);  }; }
+    
+    function givId(faTagId, tagName, many){
+      for(i=0; i<many; i++){
+        let call = faTagId.getElementsByTagName(`${tagName}`);
+        call[i].id = `${faTagId}${i}`;
+
+        
+      };  }
+
+    function makeChildgivId (faTagId, tagName, many){
+      makeChild(faTagId, tagName, many);
+      givId    (faTagId, tagName, many);
     }
+    makeChildgivId(root, 'div', 3);
 
   </script>
 </body>
