@@ -12,25 +12,22 @@
     let root = document.getElementById('root');
     console.dir(root);
 
-    function makeChild(faTagId, tagName, many){
-      for(i=0; i<many; i++){
-        let cre = document.createElement(`${tagName}`);
-        faTagId.appendChild(cre);  }; }
-    
-    function givId(faTagId, tagName, many) {
-      for(i=0; i<many; i++){
-        let fTag = document.getElementById(`${faTagId}`)
-        fTag[i] = i;
-      }
-    }
-
-    function makeChildgivId (faTagId, tagName, many){
-      makeChild(faTagId, tagName, many);
-      givId    (faTagId, tagName, many);
-    }
+    let divOne = document.createElement('div');
+    root.appendChild(divOne);
+    divOne.id = "1";
 
 
-    makeChildgivId(root, 'div', 3);
+
+    let divtwo = document.createElement('div');
+    root.appendChild(divtwo);
+    divtwo.id = "2";
+
+    let divThe = document.createElement('div');
+    root.appendChild(divThe);
+    divThe.id = "3";
+
+
+
 
   </script>
 </body>
