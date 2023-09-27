@@ -31,6 +31,18 @@
     makeGivId(root, 'div', 3);
     // 9 button in div0
     makeGivId(div0, 'button', 9);
+    
+    
+    
+    function mkBnt(fabntNum, tagName, many, emogi, price){
+    makeGivId(fabntNum, tagName, many);
+      let btn = document.getElementById(`${fabntNum}`);
+      btn.children[0].innerHTML = emogi;
+      btn.children[0].style.fontSize = "10vw";
+      btn.children[1].innerHTML = price;
+    }
+    
+    mkBnt()
 
 
   </script>
