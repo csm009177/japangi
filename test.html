@@ -17,11 +17,20 @@
       for(i=0; i<many; i++){
         let cre = document.createElement(`${tagName}`);
         faTagId.appendChild(cre);  }; }
-
-    //make 3 div
-    makeChild(root, 'div', 3);
-    
-        
+    // giv Id function    
+    function givId(faTagId, tagName, many ){
+      for(i=0; i<many; i++){
+        let call = faTagId.getElementsByTagName(`${tagName}`);
+        call[i].id = `${tagName}${i}` }
+      }
+    function makeGivId(faTagId,tagName,many){
+      makeChild(faTagId, tagName, many);
+      givId    (faTagId, tagName, many);
+    }      
+    // 3 container
+    makeGivId(root, 'div', 3);
+    // 9 button in div0
+    makeGivId(div0, 'button', 9);
 
 
   </script>
