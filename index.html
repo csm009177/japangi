@@ -34,14 +34,15 @@
       for(i=0; i<many; i++) {
         let cre = document.createElement(`${tagName}`);
         let fTag = document.getElementById(`${faTagId}`);
+        let sonTag = fTag.children;
         faTagId.appendChild(cre);
-        // fTag.children[i].id = `${faTagId}${i}`;
+        sonTag.id = `${faTagId[i]}`;
         }
       } else {
         console.error("tagName have to be string")
       }
     }
-  makeChild(div00, 5, 'div');
+
   </script>
 </body>
 </html>
