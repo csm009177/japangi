@@ -32,10 +32,15 @@
     // 9 button in div0
     makeGivId(div0, 'button', 9);
     
-    let button0 = document.getElementById('button0');
+    // styling 
+
+    makeGivId(button0, 'li', 2);
+    let btn0 = document.getElementById('button0');
+    btn0.children[0].innerHTML = '😊';
+    btn0.children[1].innerHTML = '100';
+    document.getElementById('button0').style.listStyleType = "none";
+    document.getElementById('button0').style.fontSize = "10vh";
     
-    button0.innerHTML = '😊';
-    button0.fontSize = "20vh";
     
 
 
