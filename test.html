@@ -9,11 +9,14 @@
 <body>
   <style> 
     *{margin:0; padding:0; box-sizing: border-box;   
-    };
+    align-items: center; align-content: center;
+    flex-wrap: wrap; };
   </style>
   <div id="root"></div>
   <script>
     let root = document.getElementById('root');
+    root.style.display = "flex";
+
     console.dir(root);
     
     //make child function
@@ -33,11 +36,13 @@
     }      
     // 3 container
     makeGivId(root, 'div', 3);
+    root.style.display = "flex";
+    
     // 9 button in div0
     makeGivId(div0, 'button', 9);
     div0.style.display = "flex";
     div0.style.flexWrap = "wrap";
-    div0.style.flexDirection = "row"
+    div0.style.flexDirection = "row";
 
     // styling 
 
@@ -48,7 +53,7 @@
     button0.style.listStyleType = "none";
     button0.children[0].style.fontSize = "10vh";
     button0.style.display = "flex";
-    button0.style.flexDirection = "column"
+    button0.style.flexDirection = "column";
     
     makeGivId(button1, 'li', 2);
     button1.children[0].innerHTML = '😊';
@@ -66,7 +71,7 @@
     button2.children[0].style.fontSize = "10vh";
     button2.style.display = "flex";
     button2.style.display = "flex";
-    button2.style.flexDirection = "column"
+    button2.style.flexDirection = "column";
 
     makeGivId(button3, 'li', 2);
     button3.children[0].innerHTML = '😊';
@@ -74,7 +79,7 @@
     button3.style.listStyleType = "none";
     button3.children[0].style.fontSize = "10vh";
     button3.style.display = "flex";
-    button3.style.flexDirection = "column"
+    button3.style.flexDirection = "column";
 
     makeGivId(button4, 'li', 2);
     button4.children[0].innerHTML = '😊';
@@ -82,7 +87,7 @@
     button4.style.listStyleType = "none";
     button4.children[0].style.fontSize = "10vh";
     button4.style.display = "flex";
-    button4.style.flexDirection = "column"
+    button4.style.flexDirection = "column";
 
     makeGivId(button5, 'li', 2);
     button5.children[0].innerHTML = '😊';
@@ -90,7 +95,7 @@
     button5.style.listStyleType = "none";
     button5.children[0].style.fontSize = "10vh";
     button5.style.display = "flex";
-    button5.style.flexDirection = "column"
+    button5.style.flexDirection = "column";
 
     makeGivId(button6, 'li', 2);
     button6.children[0].innerHTML = '😊';
@@ -98,7 +103,7 @@
     button6.style.listStyleType = "none";
     button6.children[0].style.fontSize = "10vh";
     button6.style.display = "flex";
-    button6.style.flexDirection = "column"
+    button6.style.flexDirection = "column";
 
     makeGivId(button7, 'li', 2);
     button7.children[0].innerHTML = '😊';
@@ -106,7 +111,7 @@
     button7.style.listStyleType = "none";
     button7.children[0].style.fontSize = "10vh";
     button7.style.display = "flex";
-    button7.style.flexDirection = "column"
+    button7.style.flexDirection = "column";
 
     makeGivId(button8, 'li', 2);
     button8.children[0].innerHTML = '😊';
@@ -114,15 +119,23 @@
     button8.style.listStyleType = "none";
     button8.children[0].style.fontSize = "10vh";
     button8.style.display = "flex";
-    button8.style.flexDirection = "column"
+    button8.style.flexDirection = "column";
 
 
     // div1 style
     let div1 = document.getElementById('div1');
-    div1.style.background = "gray"
-    div1.style.width = "10vw"
-    div1.style.height = "100vh"
-    div1.style.positon = "left"
+    div1.style.background = "darkgray";
+    div1.style.width = "2vh";
+    div1.style.height = "100vh";
+    div1.style.display = "flex";
+    div1.style.position = "fixed";
+    div1.style.left = "50vh"
+    
+    
+
+    
+
+
     
 
 
